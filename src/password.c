@@ -11,6 +11,11 @@ int get_input(Password *password) {
     scanf("%d", &len);
     puts("");
 
+    if (len < 0 || len > __INT_MAX__) {
+        fprintf(stderr, "Invalid length");
+        return -1;
+    }
+
     int parsed;
     printf("Enter the type of the password:\n"
            "Lowercase letters: %i\n"
@@ -54,7 +59,7 @@ char generate_char(type_t type) {
     int r;
 
     if (type & TYPE_LOWER) {
-        arr[len++] = (struct Arr){LOWERCASE, sizeof(LOWERCASE)};    
+        arr[len++] = (struct Arr){LOWERCASE, sizeof(LOWERCASE)};
     }
 
     if (type & TYPE_UPPER) {
