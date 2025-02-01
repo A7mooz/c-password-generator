@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 typedef enum {
-    TYPE_LOWER = 1<<1,
-    TYPE_UPPER = 1<<2,
-    TYPE_NUMBS = 1<<3,
-    TYPE_SYMBS = 1<<4
+    TYPE_LOWER = 1<<0,
+    TYPE_UPPER = 1<<1,
+    TYPE_NUMBS = 1<<2,
+    TYPE_SYMBS = 1<<3
 } type_t;
 
 typedef struct {
