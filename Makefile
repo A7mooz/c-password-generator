@@ -1,6 +1,6 @@
 include config.mk
 
-./$(REALSE_DIR)/${ouutfile}: ./$(SRC) ./$(REALSE_DIR)
+./$(REALSE_DIR)/${outfile}: ./$(SRC) ./$(REALSE_DIR)
 	${CC} -o $(REALSE_DIR)/$(outfile) ${CFLAGS} -s ${SRC}
 
 debug: ./$(DEBUG_DIR)
